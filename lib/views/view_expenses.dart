@@ -4,6 +4,7 @@ import 'package:expensify/utils/palettes.dart';
 import 'package:expensify/views/add_expenses.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'landing.dart';
@@ -36,7 +37,7 @@ class _ViewExpensesState extends State<ViewExpenses> {
           backgroundColor: palettes.primary,
           elevation: 1,
           shadowColor: Colors.white,
-          foregroundColor: Colors.white,
+          foregroundColor: palettes.secondary,
           centerTitle: true,
           title: Text("My expenses",style: TextStyle(fontFamily: "semibold",fontSize: 20),),
           automaticallyImplyLeading: false,
@@ -113,7 +114,7 @@ class _ViewExpensesState extends State<ViewExpenses> {
                     SizedBox(
                       height: 5,
                     ),
-                    Text("Jan 22, 2025 at 11:am",style: TextStyle(fontFamily: "regular",fontSize: 11),),
+                    Text(DateFormat("dd MMM yyyy • h::mm a").format(DateTime.parse(_details[5])),style: TextStyle(fontFamily: "regular",fontSize: 11),),
                     // Text(_details[5] == "" ? "No date" : _details[5],style: TextStyle(fontFamily: "regular",fontSize: 13)),
                   ],
                 ),

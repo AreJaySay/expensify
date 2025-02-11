@@ -48,7 +48,7 @@ class _AddExpensesState extends State<AddExpenses> {
           backgroundColor: palettes.primary,
           elevation: 1,
           shadowColor: Colors.white,
-          foregroundColor: Colors.white,
+          foregroundColor: palettes.secondary,
           centerTitle: true,
           title: Text("Add expenses",style: TextStyle(fontFamily: "semibold",fontSize: 20),),
           actions: [
@@ -75,7 +75,7 @@ class _AddExpensesState extends State<AddExpenses> {
                 Container(
                   height: 50,
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade500),
+                      border: Border.all(color: palettes.secondary),
                       borderRadius: BorderRadius.circular(1000)
                   ),
                   child: Row(
@@ -104,7 +104,7 @@ class _AddExpensesState extends State<AddExpenses> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade500),
+                      border: Border.all(color: palettes.secondary),
                       borderRadius: BorderRadius.circular(1000)
                   ),
                   child: TextField(
@@ -127,7 +127,7 @@ class _AddExpensesState extends State<AddExpenses> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   decoration: BoxDecoration(
-                     border: Border.all(color: Colors.grey.shade500),
+                     border: Border.all(color: palettes.secondary),
                      borderRadius: BorderRadius.circular(1000)
                   ),
                   child: TextField(
@@ -150,7 +150,7 @@ class _AddExpensesState extends State<AddExpenses> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade500),
+                      border: Border.all(color: palettes.secondary),
                       borderRadius: BorderRadius.circular(1000)
                   ),
                   child: TextField(
@@ -189,7 +189,7 @@ class _AddExpensesState extends State<AddExpenses> {
                     }
                     _snackbarMessage.snackbarMessage(context, message: "Added new expenses!");
                   }
-                },radius: 1000,color: Colors.white,fontColor: palettes.primary),
+                },radius: 1000,color: palettes.secondary,fontColor: palettes.primary),
                 SizedBox(
                   height: 30,
                 )

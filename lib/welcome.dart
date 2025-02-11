@@ -31,7 +31,7 @@ class _WelcomeState extends State<Welcome> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                child: Text("Skip",style: TextStyle(fontFamily: "semibold",color: Colors.white,fontSize: 15),),
+                child: Text("Skip",style: TextStyle(fontFamily: "semibold",color:  palettes.secondary,fontSize: 15),),
                 onPressed: (){
                   _routes.navigator_pushreplacement(context, Landing());
                 },
@@ -65,15 +65,15 @@ class _WelcomeState extends State<Welcome> {
                 ),
                 for(int x = 0; x < 3; x++)...{
                   _selected == x ?
-                  Icon(Icons.radio_button_checked,color: Colors.white,) :
-                  Icon(Icons.circle,color: Colors.white,),
+                  Icon(Icons.radio_button_checked,color: palettes.secondary,) :
+                  Icon(Icons.circle,color: palettes.secondary,),
                   SizedBox(
                     width: 10,
                   )
                 },
                 Spacer(),
                 TextButton(
-                  child: Text(_selected == 2 ? "Let's Go" : "Next",style: TextStyle(fontFamily: "semibold",color: Colors.white,fontSize: 15),),
+                  child: Text(_selected == 2 ? "Let's Go" : "Next",style: TextStyle(fontFamily: "semibold",color:  palettes.secondary,fontSize: 15),),
                   onPressed: (){
                     if(_selected == 2){
                       _routes.navigator_pushreplacement(context, Landing());

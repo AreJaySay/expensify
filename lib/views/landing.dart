@@ -79,14 +79,14 @@ class _LandingState extends State<Landing> {
                             child: Container(
                               padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                               decoration: BoxDecoration(
-                                  color: palettes.primary.withOpacity(0.9),
+                                  color: palettes.secondary.withOpacity(0.7),
                                   borderRadius: BorderRadius.circular(20)
                               ),
                               child: Column(
                                 children: [
                                   _selected == x ?
-                                  Icon(Icons.radio_button_checked,color: Colors.white,) :
-                                  Icon(Icons.circle_outlined,color: Colors.white,),
+                                  Icon(Icons.radio_button_checked,color: palettes.primary,) :
+                                  Icon(Icons.circle_outlined,color: palettes.primary,),
                                   Spacer(),
                                   Center(
                                     child: Image(
@@ -98,7 +98,7 @@ class _LandingState extends State<Landing> {
                                   SizedBox(
                                     height: 15,
                                   ),
-                                  Center(child: Text(_title[x],style: TextStyle(fontFamily: "semibold",color: Colors.white),textAlign: TextAlign.center,)),
+                                  Center(child: Text(_title[x],style: TextStyle(fontFamily: "semibold",color: palettes.primary),textAlign: TextAlign.center,)),
                                   Spacer(),
                                   SizedBox(),
                                 ],
@@ -123,7 +123,7 @@ class _LandingState extends State<Landing> {
                         Expanded(
                           child: _buttons.button(text: "Add", ontap: (){
                             _routes.navigator_push(context, AddExpenses(icon: _selectedIcon, title: _selectedTitle, details: [],currentDetails: "",));
-                          },color: palettes.primary, radius: 1000),
+                          },color: palettes.secondary, radius: 1000,fontColor: palettes.primary),
                         )
                       ],
                     ),
